@@ -6,7 +6,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: ['http://127.0.0.1:3003', 'http://localhost:3003']
+    origin: ['http://127.0.0.1:3000', 'http://localhost:3000']
   })
 );
 
@@ -34,6 +34,4 @@ app.post('/getColors', (req, res) => {
   res.json({ colorsArr });
 });
 
-app.listen(process.env.PORT || '3003', () => {
-  console.log('server 3003');
-});
+app.listen(process.env.PORT || 3000);
